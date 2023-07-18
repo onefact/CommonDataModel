@@ -31,7 +31,7 @@
 writeDdl <- function(targetDialect, cdmVersion, outputfolder, cdmDatabaseSchema = "@cdmDatabaseSchema") {
 
   # argument checks
-  stopifnot(targetDialect %in% c("oracle", "postgresql", "pdw", "redshift", "impala", "netezza", "bigquery", "sql server", "spark", "snowflake", "synapse"))
+  stopifnot(targetDialect %in% c("oracle", "duckdb", "postgresql", "pdw", "redshift", "impala", "netezza", "bigquery", "sql server", "spark", "snowflake", "synapse"))
   stopifnot(cdmVersion %in% listSupportedVersions())
   stopifnot(is.character(cdmDatabaseSchema))
 
@@ -55,7 +55,7 @@ writeDdl <- function(targetDialect, cdmVersion, outputfolder, cdmDatabaseSchema 
 writePrimaryKeys <- function(targetDialect, cdmVersion, outputfolder, cdmDatabaseSchema = "@cdmDatabaseSchema") {
 
   # argument checks
-  stopifnot(targetDialect %in% c("oracle", "postgresql", "pdw", "redshift", "impala", "netezza", "bigquery", "sql server", "spark", "snowflake", "synapse"))
+  stopifnot(targetDialect %in% c("oracle", "duckdb", "postgresql", "pdw", "redshift", "impala", "netezza", "bigquery", "sql server", "spark", "snowflake", "synapse"))
   stopifnot(cdmVersion %in% listSupportedVersions())
   stopifnot(is.character(cdmDatabaseSchema))
 
@@ -79,7 +79,7 @@ writePrimaryKeys <- function(targetDialect, cdmVersion, outputfolder, cdmDatabas
 writeForeignKeys <- function(targetDialect, cdmVersion, outputfolder, cdmDatabaseSchema = "@cdmDatabaseSchema") {
 
   # argument checks
-  stopifnot(targetDialect %in% c("oracle", "postgresql", "pdw", "redshift", "impala", "netezza", "bigquery", "sql server", "spark", "snowflake", "synapse"))
+  stopifnot(targetDialect %in% c("oracle", "duckdb", "postgresql", "pdw", "redshift", "impala", "netezza", "bigquery", "sql server", "spark", "snowflake", "synapse"))
   stopifnot(cdmVersion %in% listSupportedVersions())
   stopifnot(is.character(cdmDatabaseSchema))
 
@@ -103,7 +103,7 @@ writeForeignKeys <- function(targetDialect, cdmVersion, outputfolder, cdmDatabas
 writeIndex <- function(targetDialect, cdmVersion, outputfolder, cdmDatabaseSchema  = "@cdmDatabaseSchema") {
 
   # argument checks
-  stopifnot(targetDialect %in% c("oracle", "postgresql", "pdw", "redshift", "impala", "netezza", "bigquery", "sql server", "spark", "snowflake", "synapse"))
+  stopifnot(targetDialect %in% c("oracle", "duckdb", "postgresql", "pdw", "redshift", "impala", "netezza", "bigquery", "sql server", "spark", "snowflake", "synapse"))
   stopifnot(cdmVersion %in% listSupportedVersions())
   stopifnot(is.character(cdmDatabaseSchema))
 
