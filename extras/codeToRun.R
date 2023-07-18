@@ -2,12 +2,12 @@
 
 # For a given cdmVersion, create all ddl sql files for every sql dialect
 # Results are written to inst/ddl/cdm_version/dialect.
-cdmVersion <- "5.4"
+cdmVersion <- "5.5"
 
 supportedVersions <- CommonDataModel::listSupportedVersions()
 
 for (cdmVersion in supportedVersions) {
-  for (targetDialect in c("oracle", "postgresql", "pdw", "redshift", "impala", "netezza", "bigquery", "sql server", "spark", "snowflake", "synapse")) {
+  for (targetDialect in c("oracle", "duckdb", "postgresql", "pdw", "redshift", "impala", "netezza", "bigquery", "sql server", "spark", "snowflake", "synapse")) {
     CommonDataModel::writeDdl(targetDialect = targetDialect,
                               cdmVersion = cdmVersion)
 
@@ -22,14 +22,12 @@ for (cdmVersion in supportedVersions) {
   }
 }
 
-CommonDataModel::buildRelease("5.3")
+CommonDataModel::buildRelease("5.5")
 
 #############
 # Zipping release
 # All dialects
-CommonDataModel::buildReleaseZip(cdmVersion="5.3", outputfolder="output")
-
-buildReleaseZip()
+CommonDataModel::buildRelease(cdmVersion="5.5", outputfolder="output")
 
 # One dialect
 buildReleaseZip(cdmVersion="5.4", targetDialect="postgresql", outputfolder="output")

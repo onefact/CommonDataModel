@@ -3,7 +3,7 @@
 #' @return A character vector containing the support CDM versions in {major}.{minor} format.
 #' @export
 listSupportedVersions <- function() {
-  supportedVersions <- c("5.3", "5.4")
+  supportedVersions <- c("5.3", "5.4", "5.5")
   return(supportedVersions)
 }
 
@@ -12,6 +12,6 @@ listSupportedVersions <- function() {
 #' @export
 
 listSupportedDialects <- function() {
-  supportedDialects <- c("oracle", "postgresql", "pdw", "redshift", "impala", "netezza", "bigquery", "sql server", "spark", "snowflake", "synapse")
+  supportedDialects <- c("oracle", "duckdb", "postgresql", "pdw", "redshift", "impala", "netezza", "bigquery", "sql server", "spark", "snowflake", "synapse")
   return(supportedDialects)
 }
